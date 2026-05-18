@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PAC4_Calculadora"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow" Height="680" Width="600">
     <!-- Marc exterior -->
     <Border>
         <Border.Background>
@@ -20,7 +20,7 @@
             <!-- Logo -->
             <RowDefinition Height="1.5*"/>
             <!-- Pantalla -->
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
             <!-- Zona de botons -->
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
@@ -48,12 +48,14 @@
 
         <!-- Fila 0: Logo i placa solar -->
         <Grid Grid.Row="0" Panel.ZIndex="2"> <!-- ZIndex="2" per posar-ho per sobre del fons negre -->
-            <!-- Logo -->
-            <TextBlock Text="CASIO" Foreground="White" FontWeight="ExtraBold" FontFamily="Arial" FontSize="22" Margin="25,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <TextBlock.RenderTransform>
-                    <ScaleTransform ScaleX="1.6"/>
-                </TextBlock.RenderTransform>
-            </TextBlock>
+            <!-- Logo  -->
+            <TextBlock Text="CASIO"
+                       Foreground="White"
+                       FontFamily="pack://application:,,,/PAC4-Calculadora;component/Assets/Fonts/EurostileExtended/#Eurostile Extended Black"
+                       FontSize="26"
+                       Margin="25,0,0,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"/>
 
             <!-- "Placa solar" -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -87,14 +89,45 @@
                         <!-- vora interior fosca per simular enfonsament-->
                     <Border BorderBrush="#80000000" BorderThickness="2,2,1,1" CornerRadius="4"/>
                     
-                    <TextBlock x:Name="Pantalla"
-                               Text="0"
-                               FontFamily="Consolas"
-                               FontSize="45"
-                               TextAlignment="Right"
-                               VerticalAlignment="Center"
-                               Padding="15,0,15,0"
-                               Foreground="#1A2820" Height="54" Margin="10,0,10,0"/>
+                    <!-- Grid interior de la pantalla: 2 files -->
+                    <!-- Fila 0: expressió en curs -->
+                    <!-- Fila 1: número principal-->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <!-- Expressio: alçada mínima per deixar el màxim espai al número principal -->
+                            <RowDefinition Height="40"/>
+                            <!-- Número principal: ocupa la resta -->
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Línia d'historial -->
+                        <!-- Mostra l'operació acumulada -->
+                        <TextBlock x:Name="PantallaExpressio"
+                                   Grid.Row="0"
+                                   Text=""
+                                   FontFamily="pack://application:,,,/PAC4-Calculadora;component/Assets/Fonts/DSDigital/#DS-Digital"
+                                   FontSize="30"
+                                   TextAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Padding="10,0,12,0"
+                                   Foreground="#3A5248"
+                                   Opacity="0.85"/>
+
+                        <!-- Número principal amb ViewBox per a l'escala automàtica -->
+                        <Viewbox Grid.Row="1"
+                                 Stretch="Uniform"
+                                 HorizontalAlignment="Right"
+                                 VerticalAlignment="Center"
+                                 Margin="10,0,10,4">
+                            <TextBlock x:Name="Pantalla"
+                                       Text="0"
+                                       FontFamily="pack://application:,,,/PAC4-Calculadora;component/Assets/Fonts/DSDigital/#DS-Digital"
+                                       FontSize="70"
+                                       TextAlignment="Right"
+                                       Padding="5,0,5,0"
+                                       Foreground="#1A2820"/>
+                        </Viewbox>
+                    </Grid>
                 </Grid>
             </Border>
         </Border>
@@ -116,31 +149,31 @@
             </Grid.ColumnDefinitions>
 
             <!-- Línia 1 -->
-            <Button Grid.Row="0" Grid.Column="0" Content="7" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="0" Grid.Column="1" Content="8" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="0" Grid.Column="2" Content="9" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="0" Grid.Column="3" Content="C" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#DC8850" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="0" Grid.Column="4" Content="AC" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#DC8850" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="0" Grid.Column="0" Content="7" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="0" Grid.Column="1" Content="8" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="0" Grid.Column="2" Content="9" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoC_Click" Grid.Row="0" Grid.Column="3" Content="C" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#DC8850" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoAC_Click" Grid.Row="0" Grid.Column="4" Content="AC" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#DC8850" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
 
             <!-- Línia 2 -->
-            <Button Grid.Row="1" Grid.Column="0" Content="4" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="1" Grid.Column="1" Content="5" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="1" Grid.Column="2" Content="6" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="1" Grid.Column="3" Content="×" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="1" Grid.Column="4" Content="÷" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="1" Grid.Column="0" Content="4" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="1" Grid.Column="1" Content="5" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="1" Grid.Column="2" Content="6" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoOperador_Click" Grid.Row="1" Grid.Column="3" Content="×" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoOperador_Click" Grid.Row="1" Grid.Column="4" Content="÷" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
 
             <!-- Línia 3 -->
-            <Button Grid.Row="2" Grid.Column="0" Content="1" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="2" Grid.Column="1" Content="2" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="2" Grid.Column="2" Content="3" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Content="+" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="2" Grid.Column="4" Content="-" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="2" Grid.Column="0" Content="1" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="2" Grid.Column="1" Content="2" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="2" Grid.Column="2" Content="3" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoOperador_Click" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Content="+" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoOperador_Click" Grid.Row="2" Grid.Column="4" Content="-" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#453F3C" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
 
             <!-- Línia 4 -->
-            <Button Grid.Row="3" Grid.Column="0" Content="0" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="3" Grid.Column="1" Content="00" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="3" Grid.Column="2" Content="·" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
-            <Button Grid.Row="3" Grid.Column="4" Content="=" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0,0,0,11" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#EC4C4A" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="3" Grid.Column="0" Content="0" Foreground="#F0EDE8" FontSize="40" Margin="4, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="3" Grid.Column="1" Content="00" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="05" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoDigit_Click" Grid.Row="3" Grid.Column="2" Content="·" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 6, 6" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#B5AEAA" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
+            <Button Click="BotoIgual_Click" Grid.Row="3" Grid.Column="4" Content="=" Foreground="#F0EDE8" FontSize="40" Margin="6, 6, 4, 6" Padding="0,0,0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#EC4C4A" BorderThickness="0" Style="{StaticResource EstilBoto}"/>
         </Grid>
     </Grid>
     </Border>

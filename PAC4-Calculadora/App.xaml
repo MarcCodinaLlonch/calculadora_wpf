@@ -13,6 +13,7 @@
 
         <!-- Estil animació botons amb efecte 3D (Degradats i Ombres) -->
         <Style x:Key="EstilBoto" TargetType="Button">
+            <Setter Property="FontFamily" Value="pack://application:,,,/PAC4-Calculadora;component/Assets/Fonts/Botons/Inter/#Inter" />
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>

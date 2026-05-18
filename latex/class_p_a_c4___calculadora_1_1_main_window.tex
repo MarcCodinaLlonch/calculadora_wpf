@@ -1,0 +1,304 @@
+\hypertarget{class_p_a_c4___calculadora_1_1_main_window}{}\section{P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window Class Reference}
+\label{class_p_a_c4___calculadora_1_1_main_window}\index{P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window}}
+Inheritance diagram for P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_a_c4___calculadora_1_1_main_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a3332f70a514dc3489ebb21285d219f04}{Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la classe \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window}{Main\+Window}}. Inicialitza els components visuals de la calculadora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_ac2001931ffe0b6ca6f5128310196cac0}{Actualitzar\+Pantalla}} (string text)
+\begin{DoxyCompactList}\small\item\em Mètode per actualitzar la pantalla amb el text formatat correctament (coma en lloc de punt). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a514f2c027009dbf5f19ddba53e03f751}{Mostrar\+Resultat}} (double valor)
+\begin{DoxyCompactList}\small\item\em Mètode per mostrar el resultat final a pantalla, aplicant format correcte (notació científica si cal). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_af1208aab8665c6acd9c81811d182a82a}{Actualitzar\+Expressio}} ()
+\begin{DoxyCompactList}\small\item\em Mètode per actualitzar la línia d\textquotesingle{}expressió que mostra operació acumulada. Converteix punts a comes per a visualització. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a5e7174a57d9b4003763d5c50646e1466}{Formatar\+Resultat}} (double valor)
+\begin{DoxyCompactList}\small\item\em Mètode per formatar el resultat numèric. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a1d10dfb25aa5485ccb3e129cb4b28994}{Boto\+Digit\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Gestiò dels botons numèrics (0-\/9, \char`\"{}00\char`\"{} i \char`\"{}·\char`\"{} per a la coma decimal) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a0e517e85785a6d5c4416c1799ff83f74}{Boto\+Operador\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Gestiò dels botons d\textquotesingle{}operador (+, -\/, ×, ÷) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_ab1645c298f24fcedef1ad01c81f3da86}{Boto\+C\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Botó C — Clear \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_ac90763ab3827e3b9dac17a80f9303b25}{Boto\+A\+C\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Botó AC — All Clear \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a4c90e856d7eeed3dc7566065be69e24c}{Boto\+Igual\+\_\+\+Click}} (object sender, Routed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Botó \char`\"{}=\char`\"{} — Avalua expressió actual i mostra resultat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a0c53c4846653c6a7f127f4582d0cf449}{Mostrar\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Mètode per mostrar un error a pantalla i reiniciar l\textquotesingle{}estat de la calculadora. No esborra la línia d\textquotesingle{}expressió perquè l\textquotesingle{}usuari pugui veure què ha intentat calcular i per què ha fallat. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_af6006833170f4d7a2929bc70f6b420de}{es\+Operador}} (string token)
+\begin{DoxyCompactList}\small\item\em Mètode per determinar si un element és un operador vàlid. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a30d4b4f2024024399de93f57e066e515}{Calcula}} (List$<$ string $>$ expressio)
+\begin{DoxyCompactList}\small\item\em Mètode per calcular el resultat d\textquotesingle{}una expressió representada com a llista d\textquotesingle{}elements\textquotesingle{} (números i operadors). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a5d6e70e81a8225be10dd77d9dd7ee9b4}{\+\_\+tokens}} = new List$<$string$>$()
+\begin{DoxyCompactList}\small\item\em Llista dels números i operadors de l\textquotesingle{}operació que s\textquotesingle{}està fent --$>$ elements \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a73e58986923c484ea3ac05d2d6d71915}{\+\_\+entrada\+Actual}} = \char`\"{}0\char`\"{}
+\begin{DoxyCompactList}\small\item\em Número que l\textquotesingle{}usuari està teclejant en aquest moment. Es mostra coma per pantalla per es guarda amb punt. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_ac3beb81b14960e319ce0b1cea97c9b36}{\+\_\+nou\+Numero}} = true
+\begin{DoxyCompactList}\small\item\em Boleà que indica si el pròxim dígit ha d\textquotesingle{}iniciar número nou. Sobreescriu a pantalla o afegeix al costat de l\textquotesingle{}actual. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window_a076e89ab8f4a2dc5e7653933ce7ebe22}{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+E\+N\+T\+R\+A\+DA}} = 16
+\begin{DoxyCompactList}\small\item\em Màxim de dígits permesos per entrada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a3332f70a514dc3489ebb21285d219f04}\label{class_p_a_c4___calculadora_1_1_main_window_a3332f70a514dc3489ebb21285d219f04}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Main\+Window@{Main\+Window}}
+\index{Main\+Window@{Main\+Window}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Main\+Window()}{MainWindow()}}
+{\footnotesize\ttfamily P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la classe \mbox{\hyperlink{class_p_a_c4___calculadora_1_1_main_window}{Main\+Window}}. Inicialitza els components visuals de la calculadora. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_af1208aab8665c6acd9c81811d182a82a}\label{class_p_a_c4___calculadora_1_1_main_window_af1208aab8665c6acd9c81811d182a82a}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Actualitzar\+Expressio@{Actualitzar\+Expressio}}
+\index{Actualitzar\+Expressio@{Actualitzar\+Expressio}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Actualitzar\+Expressio()}{ActualitzarExpressio()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Actualitzar\+Expressio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Mètode per actualitzar la línia d\textquotesingle{}expressió que mostra operació acumulada. Converteix punts a comes per a visualització. 
+
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_ac2001931ffe0b6ca6f5128310196cac0}\label{class_p_a_c4___calculadora_1_1_main_window_ac2001931ffe0b6ca6f5128310196cac0}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Actualitzar\+Pantalla@{Actualitzar\+Pantalla}}
+\index{Actualitzar\+Pantalla@{Actualitzar\+Pantalla}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Actualitzar\+Pantalla()}{ActualitzarPantalla()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Actualitzar\+Pantalla (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Mètode per actualitzar la pantalla amb el text formatat correctament (coma en lloc de punt). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & El text que es vol mostrar a la pantalla.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_ac90763ab3827e3b9dac17a80f9303b25}\label{class_p_a_c4___calculadora_1_1_main_window_ac90763ab3827e3b9dac17a80f9303b25}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Boto\+A\+C\+\_\+\+Click@{Boto\+A\+C\+\_\+\+Click}}
+\index{Boto\+A\+C\+\_\+\+Click@{Boto\+A\+C\+\_\+\+Click}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Boto\+A\+C\+\_\+\+Click()}{BotoAC\_Click()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Boto\+A\+C\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Botó AC — All Clear 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & L\textquotesingle{}objecte que ha disparat l\textquotesingle{}esdeveniment (el botó premut).\\
+\hline
+{\em e} & Els arguments de l\textquotesingle{}esdeveniment.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_ab1645c298f24fcedef1ad01c81f3da86}\label{class_p_a_c4___calculadora_1_1_main_window_ab1645c298f24fcedef1ad01c81f3da86}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Boto\+C\+\_\+\+Click@{Boto\+C\+\_\+\+Click}}
+\index{Boto\+C\+\_\+\+Click@{Boto\+C\+\_\+\+Click}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Boto\+C\+\_\+\+Click()}{BotoC\_Click()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Boto\+C\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Botó C — Clear 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & L\textquotesingle{}objecte que ha disparat l\textquotesingle{}esdeveniment (el botó premut).\\
+\hline
+{\em e} & Els arguments de l\textquotesingle{}esdeveniment.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a1d10dfb25aa5485ccb3e129cb4b28994}\label{class_p_a_c4___calculadora_1_1_main_window_a1d10dfb25aa5485ccb3e129cb4b28994}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Boto\+Digit\+\_\+\+Click@{Boto\+Digit\+\_\+\+Click}}
+\index{Boto\+Digit\+\_\+\+Click@{Boto\+Digit\+\_\+\+Click}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Boto\+Digit\+\_\+\+Click()}{BotoDigit\_Click()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Boto\+Digit\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gestiò dels botons numèrics (0-\/9, \char`\"{}00\char`\"{} i \char`\"{}·\char`\"{} per a la coma decimal) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & L\textquotesingle{}objecte que ha disparat l\textquotesingle{}esdeveniment (el botó premut).\\
+\hline
+{\em e} & Els arguments de l\textquotesingle{}esdeveniment.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a4c90e856d7eeed3dc7566065be69e24c}\label{class_p_a_c4___calculadora_1_1_main_window_a4c90e856d7eeed3dc7566065be69e24c}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Boto\+Igual\+\_\+\+Click@{Boto\+Igual\+\_\+\+Click}}
+\index{Boto\+Igual\+\_\+\+Click@{Boto\+Igual\+\_\+\+Click}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Boto\+Igual\+\_\+\+Click()}{BotoIgual\_Click()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Boto\+Igual\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Botó \char`\"{}=\char`\"{} — Avalua expressió actual i mostra resultat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & L\textquotesingle{}objecte que ha disparat l\textquotesingle{}esdeveniment (el botó premut).\\
+\hline
+{\em e} & Els arguments de l\textquotesingle{}esdeveniment.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a0e517e85785a6d5c4416c1799ff83f74}\label{class_p_a_c4___calculadora_1_1_main_window_a0e517e85785a6d5c4416c1799ff83f74}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Boto\+Operador\+\_\+\+Click@{Boto\+Operador\+\_\+\+Click}}
+\index{Boto\+Operador\+\_\+\+Click@{Boto\+Operador\+\_\+\+Click}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Boto\+Operador\+\_\+\+Click()}{BotoOperador\_Click()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Boto\+Operador\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Routed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gestiò dels botons d\textquotesingle{}operador (+, -\/, ×, ÷) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & L\textquotesingle{}objecte que ha disparat l\textquotesingle{}esdeveniment (el botó premut).\\
+\hline
+{\em e} & Els arguments de l\textquotesingle{}esdeveniment.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a30d4b4f2024024399de93f57e066e515}\label{class_p_a_c4___calculadora_1_1_main_window_a30d4b4f2024024399de93f57e066e515}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Calcula@{Calcula}}
+\index{Calcula@{Calcula}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Calcula()}{Calcula()}}
+{\footnotesize\ttfamily double P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Calcula (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{expressio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Mètode per calcular el resultat d\textquotesingle{}una expressió representada com a llista d\textquotesingle{}elements\textquotesingle{} (números i operadors). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expressio} & La llista d\textquotesingle{}elements (tokens) que formen l\textquotesingle{}expressió matemàtica a avaluar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El resultat numèric de l\textquotesingle{}operació matemàtica resolta.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_af6006833170f4d7a2929bc70f6b420de}\label{class_p_a_c4___calculadora_1_1_main_window_af6006833170f4d7a2929bc70f6b420de}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!es\+Operador@{es\+Operador}}
+\index{es\+Operador@{es\+Operador}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{es\+Operador()}{esOperador()}}
+{\footnotesize\ttfamily bool P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+es\+Operador (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Mètode per determinar si un element és un operador vàlid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & L\textquotesingle{}element (cadena de text) a comprovar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna cert si és un operador vàlid (+, -\/, ×, $\ast$, ÷, /, x, X), fals en cas contrari.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a5e7174a57d9b4003763d5c50646e1466}\label{class_p_a_c4___calculadora_1_1_main_window_a5e7174a57d9b4003763d5c50646e1466}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Formatar\+Resultat@{Formatar\+Resultat}}
+\index{Formatar\+Resultat@{Formatar\+Resultat}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Formatar\+Resultat()}{FormatarResultat()}}
+{\footnotesize\ttfamily string P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Formatar\+Resultat (\begin{DoxyParamCaption}\item[{double}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Mètode per formatar el resultat numèric. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & El valor numèric a formatar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La cadena de text amb el número formatat correctament (amb coma decimal o notació científica).
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a0c53c4846653c6a7f127f4582d0cf449}\label{class_p_a_c4___calculadora_1_1_main_window_a0c53c4846653c6a7f127f4582d0cf449}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Mostrar\+Error@{Mostrar\+Error}}
+\index{Mostrar\+Error@{Mostrar\+Error}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Mostrar\+Error()}{MostrarError()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Mostrar\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Mètode per mostrar un error a pantalla i reiniciar l\textquotesingle{}estat de la calculadora. No esborra la línia d\textquotesingle{}expressió perquè l\textquotesingle{}usuari pugui veure què ha intentat calcular i per què ha fallat. 
+
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a514f2c027009dbf5f19ddba53e03f751}\label{class_p_a_c4___calculadora_1_1_main_window_a514f2c027009dbf5f19ddba53e03f751}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!Mostrar\+Resultat@{Mostrar\+Resultat}}
+\index{Mostrar\+Resultat@{Mostrar\+Resultat}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{Mostrar\+Resultat()}{MostrarResultat()}}
+{\footnotesize\ttfamily void P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+Mostrar\+Resultat (\begin{DoxyParamCaption}\item[{double}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Mètode per mostrar el resultat final a pantalla, aplicant format correcte (notació científica si cal). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & El valor numèric del resultat que es vol mostrar.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a73e58986923c484ea3ac05d2d6d71915}\label{class_p_a_c4___calculadora_1_1_main_window_a73e58986923c484ea3ac05d2d6d71915}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!\+\_\+entrada\+Actual@{\+\_\+entrada\+Actual}}
+\index{\+\_\+entrada\+Actual@{\+\_\+entrada\+Actual}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+entrada\+Actual}{\_entradaActual}}
+{\footnotesize\ttfamily string P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+\_\+entrada\+Actual = \char`\"{}0\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número que l\textquotesingle{}usuari està teclejant en aquest moment. Es mostra coma per pantalla per es guarda amb punt. 
+
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_ac3beb81b14960e319ce0b1cea97c9b36}\label{class_p_a_c4___calculadora_1_1_main_window_ac3beb81b14960e319ce0b1cea97c9b36}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!\+\_\+nou\+Numero@{\+\_\+nou\+Numero}}
+\index{\+\_\+nou\+Numero@{\+\_\+nou\+Numero}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+nou\+Numero}{\_nouNumero}}
+{\footnotesize\ttfamily bool P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+\_\+nou\+Numero = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Boleà que indica si el pròxim dígit ha d\textquotesingle{}iniciar número nou. Sobreescriu a pantalla o afegeix al costat de l\textquotesingle{}actual. 
+
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a5d6e70e81a8225be10dd77d9dd7ee9b4}\label{class_p_a_c4___calculadora_1_1_main_window_a5d6e70e81a8225be10dd77d9dd7ee9b4}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!\+\_\+tokens@{\+\_\+tokens}}
+\index{\+\_\+tokens@{\+\_\+tokens}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+tokens}{\_tokens}}
+{\footnotesize\ttfamily List$<$string$>$ P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+\_\+tokens = new List$<$string$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Llista dels números i operadors de l\textquotesingle{}operació que s\textquotesingle{}està fent --$>$ elements 
+
+\mbox{\Hypertarget{class_p_a_c4___calculadora_1_1_main_window_a076e89ab8f4a2dc5e7653933ce7ebe22}\label{class_p_a_c4___calculadora_1_1_main_window_a076e89ab8f4a2dc5e7653933ce7ebe22}} 
+\index{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}!M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+E\+N\+T\+R\+A\+DA@{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+E\+N\+T\+R\+A\+DA}}
+\index{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+E\+N\+T\+R\+A\+DA@{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+E\+N\+T\+R\+A\+DA}!P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window@{P\+A\+C4\+\_\+\+Calculadora\+::\+Main\+Window}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+E\+N\+T\+R\+A\+DA}{MAX\_DIGITS\_ENTRADA}}
+{\footnotesize\ttfamily const int P\+A\+C4\+\_\+\+Calculadora.\+Main\+Window.\+M\+A\+X\+\_\+\+D\+I\+G\+I\+T\+S\+\_\+\+E\+N\+T\+R\+A\+DA = 16\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Màxim de dígits permesos per entrada. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+A\+C4-\/\+Calculadora/Main\+Window.\+xaml.\+cs\end{DoxyCompactItemize}
