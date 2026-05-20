@@ -72,13 +72,13 @@ Implementa un avaluador matemàtic basat en una llista de tokens que respecta la
  
 ### Calculadora en repòs
  
-![Calculadora en repòs](Assets/estat_inicial.png)
+![Calculadora en repòs](PAC4-Calculadora/Assets/estat_inicial.png)
  
 ### Operació encadenada en curs
  
 L'expressió acumulada es mostra en temps real a la línia superior de la pantalla.
  
-![Operació en curs](Assets/operacio.png)
+![Operació en curs](PAC4-Calculadora/Assets/operacio.png)
  
 ### Resultat amb prioritat operativa
  
@@ -86,13 +86,13 @@ Expressió: `1 + 3 × 5 - 2 ÷ 4`
  
 L'avaluador resol primer `3 × 5 = 15` i `2 ÷ 4 = 0,5`, i finalment `1 + 15 - 0,5 = **15,5**`.
  
-![Resultat final](Assets/resultat.png)
+![Resultat final](PAC4-Calculadora/Assets/resultat.png)
  
 ### Error: Divisió per zero
  
 Quan es detecta una divisió per zero, la pantalla mostra `Error` i la línia d'historial conserva l'expressió que l'ha causat perquè l'usuari pugui identificar el problema.
  
-![Error divisió per zero](Assets/error.png)
+![Error divisió per zero](PAC4-Calculadora/Assets/error.png)
 
 ## 🔍 Conclusions i reflexions
  
