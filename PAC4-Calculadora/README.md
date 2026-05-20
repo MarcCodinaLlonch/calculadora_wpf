@@ -17,8 +17,6 @@ Implementa un avaluador matemàtic basat en una llista de tokens que respecta la
 - **Curs:** 1r DAM — Centre Teknós (UVIC-UCC)
 - **Llicència:** Distribuït sota la [Llicència MIT](https://opensource.org/licenses/MIT)
 
----
-
 ## 📚 Índex
 
 1. [Requisits del sistema](#️-requisits-del-sistema)
@@ -28,8 +26,6 @@ Implementa un avaluador matemàtic basat en una llista de tokens que respecta la
 5. [Exemples d'ús](#-exemples-dús)
 6. [Conclusions i reflexions](#-conclusions-i-reflexions)
 
----
-
 ## ⚙️ Requisits del sistema
 
 | Requisit | Detall |
@@ -38,20 +34,16 @@ Implementa un avaluador matemàtic basat en una llista de tokens que respecta la
 | Entorn d'execució | [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) |
 | Entorn de desenvolupament | Visual Studio 2022 (per compilar) |
 
----
-
 ## ✨ Funcionalitats principals
 
-- 🎨 Interfície visual treballada — Disseny responsive amb Grid, degradats, ombres (DropShadowEffect), efecte 3D als botons i tipografies personalitzades (DS-Digital, Eurostile Extended).
-- 📺 Doble línia de pantalla — Línia d'expressió en temps real (estil Windows Calculator) + número principal amb escala automàtica via ViewBox.
-- 🔢 Prioritat operativa — L'avaluador resol × i ÷ abans que + i - mitjançant un algorisme de dos passos lineal.
-- ⛓️ Operacions encadenades — Permet expressions llargues del tipus 1 + 3 × 5 - 2 ÷ 4 = i obtenir el resultat correcte.
-- 🛡️ Gestió d'errors — Divisió per zero detectada i mostrada com a Error, conservant l'expressió que l'ha causat a la línia d'historial. També detecta seqüències invàlides com 5 + = o 5 × ÷ 3.
-- 🧹 C i AC diferenciats — C esborra l'última entrada conservant l'operació. AC fa un reinici complet.
-- 🔟 Botó 00 — Afegeix doble zero amb validació per evitar formats invàlids com 007.
-- 🌍 Compatibilitat regional — Ús de CultureInfo.InvariantCulture per garantir el comportament correcte dels decimals en qualsevol configuració regional.
-
----
+- **Interfície visual treballada:** Disseny responsive amb Grid, degradats, ombres (DropShadowEffect), efecte 3D als botons i tipografies personalitzades (DS-Digital, Eurostile Extended).
+- **Doble línia de pantalla:** Línia d'expressió en temps real (estil Windows Calculator) + número principal amb escala automàtica via ViewBox.
+- **Prioritat operativa:** L'avaluador resol × i ÷ abans que + i - mitjançant un algorisme de dos passos lineal.
+- **Operacions encadenades:** Permet expressions llargues del tipus 1 + 3 × 5 - 2 ÷ 4 = i obtenir el resultat correcte.
+- **Gestió d'errors:** Divisió per zero detectada i mostrada com a Error, conservant l'expressió que l'ha causat a la línia d'historial. També detecta seqüències invàlides com 5 + = o 5 × ÷ 3.
+- **C i AC diferenciats:** C esborra l'última entrada conservant l'operació. AC fa un reinici complet.
+- **Botó 00:** Afegeix doble zero amb validació per evitar formats invàlids com 007.
+- **Compatibilitat regional:** Ús de CultureInfo.InvariantCulture per garantir el comportament correcte dels decimals en qualsevol configuració regional.
 
 ## 🚀 Guia d'instal·lació
 
@@ -63,8 +55,6 @@ Implementa un avaluador matemàtic basat en una llista de tokens que respecta la
 3. **Compilar i executar:** Prem `F5` o fes clic a **Inicia** per compilar i llançar l'aplicació.
 
 > **Nota:** No cal instal·lar res addicional. Les tipografies estan incloses com a recurs dins del projecte (`Assets/Fonts/`).
-
----
 
 ## 📖 Guia d'ús
 
@@ -78,23 +68,17 @@ Implementa un avaluador matemàtic basat en una llista de tokens que respecta la
 | Esborrar l'entrada actual | Botó `C` (conserva l'expressió acumulada) |
 | Reiniciar tot | Botó `AC` |
 
----
-
 ## 💡 Exemples d'ús
  
 ### Calculadora en repòs
  
 ![Calculadora en repòs](Assets/estat_inicial.png)
  
----
- 
 ### Operació encadenada en curs
  
 L'expressió acumulada es mostra en temps real a la línia superior de la pantalla.
  
 ![Operació en curs](Assets/operacio.png)
- 
----
  
 ### Resultat amb prioritat operativa
  
@@ -104,17 +88,13 @@ L'avaluador resol primer `3 × 5 = 15` i `2 ÷ 4 = 0,5`, i finalment `1 + 15 - 0
  
 ![Resultat final](Assets/resultat.png)
  
----
- 
 ### Error: Divisió per zero
  
 Quan es detecta una divisió per zero, la pantalla mostra `Error` i la línia d'historial conserva l'expressió que l'ha causat perquè l'usuari pugui identificar el problema.
  
 ![Error divisió per zero](Assets/error.png)
- 
----
 
- ## 🔍 Conclusions i reflexions
+## 🔍 Conclusions i reflexions
  
 ### La separació d'estat és la clau del comportament correcte
  

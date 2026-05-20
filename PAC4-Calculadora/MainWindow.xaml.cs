@@ -139,6 +139,12 @@ namespace PAC4_Calculadora
                 return;
             }
 
+            // Si venim d'un resultat (la pantalla d'expressió conté "="), la buidem abans de començar un nou número
+            if (PantallaExpressio.Text.Contains("="))
+            {
+                PantallaExpressio.Text = "";
+            }
+
             Button boto = (Button)sender;
             string valor = boto.Content.ToString();
 
@@ -310,8 +316,7 @@ namespace PAC4_Calculadora
                 _entradaActual = resultat.ToString(CultureInfo.InvariantCulture);
                 _tokens.Clear();
                 _nouNumero = true;
-                // Un cop mostrat el resultat net, buidem la línia d'expressió
-                PantallaExpressio.Text = "";
+                // Mantenim l'expressió completa a sobre de la línia del resultat
             }
             catch (DivideByZeroException)
             {
