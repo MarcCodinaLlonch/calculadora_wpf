@@ -48,9 +48,9 @@ Implementa un avaluador matemàtic basat en una llista de tokens que respecta la
 ## 🚀 Guia d'instal·lació
 
 1. **Clonar el repositori:**
-   ```bash
+```bash
    git clone https://github.com/MarcCodinaLlonch/PAC4-Calculadora.git
-   ```
+```
 2. **Obrir la solució:** Obre el fitxer `PAC4-Calculadora.sln` amb **Visual Studio 2022**.
 3. **Compilar i executar:** Prem `F5` o fes clic a **Inicia** per compilar i llançar l'aplicació.
 
@@ -112,7 +112,7 @@ Separar els dos nivells de prioritat en dos passos independents és una solució
  
 Un problema habitual en calculadores és que quan el resultat té molts dígits, el text no cap a la pantalla. Les solucions més habituals poden ser reduir la mida de la font en funció de la longitud del text o bé per truncar el número. Ambdues opcions requereixen codi addicional i resulten en casos difícils de gestionar.
  
-WPF ofereix `ViewBox`, un contenidor que escala automàticament el seu contingut per omplir l'espai disponible mantenint les proporcions. Embolicant el `TextBlock` principal amb un `ViewBox`, s'obté un comportament automàtic: la font s'escala a la mida màxima que cabi senseque sigui necessari escriure cap línia de codi per gestionar de mida.
+WPF ofereix `ViewBox`, un contenidor que escala automàticament el seu contingut per omplir l'espai disponible mantenint les proporcions. Embolicant el `TextBlock` principal amb un `ViewBox`, s'obté un comportament automàtic: la font s'escala a la mida màxima que cabi sense que sigui necessari escriure cap línia de codi per gestionar la mida.
  
 ### La importància de `CultureInfo.InvariantCulture`
  
